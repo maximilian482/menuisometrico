@@ -1,0 +1,103 @@
+@import url('https://font.googleapis.com/css?family-Oswald:400,700');
+
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  
+}
+
+.section {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  width: 1200px;
+  height: 300px;
+}
+
+#menu {
+  text-align: right;
+  justify-content: center;
+  
+}
+
+ul {	
+	float: left;
+  margin: 50px;
+  
+  
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 15px;
+  top: 100px;
+	float: left;
+  background: #1e5b64;
+  border-radius: 100px;
+  width: 120px;
+  z-index: var(--i);
+  transform: skewY(5deg);
+  transform-origin: top;
+  transition: 0.5s;
+}
+ul li:hover {
+	background: #1e5b64;
+  
+  transform: translateY(-25px);
+
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 5px;
+  height: 50px;
+  background: #1e5b64;
+  transform-origin: right;
+  transform: skewY(75deg);
+  transition: 0.5s;
+}
+
+ul li::after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  width: 100px;
+  height: 5px;
+  background: #1e5b64;
+  
+  transform: skewY(20deg);
+  transition: 0.5s;
+}
+
+
+ul li:hover::after {
+  background: #1e5b64;
+}
+
+ul a {
+	display: block;
+	padding: 0 2em;
+	line-height: 2.2em;
+	text-decoration: none;
+	color: #fff;
+	background: url(divisor.png) repeat-y left top;
+
+}
+
+ul li:hover a {
+  background: #2982b9;
+  border-radius: 10px;
+  text-transform:uppercase;
+}
+
+ul .primeiro a {
+	background: none;
+}
+
